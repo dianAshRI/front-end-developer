@@ -1,0 +1,61 @@
+.container{
+   width: 800px;
+   background-color: rgba(255, 255, 255, 0.61);
+   margin: 0 auto;
+   border: 2px solid black; 
+
+}
+.header{
+    padding: 20px;
+}
+.header ul{
+    display: flex;
+    margin-left: -40px;
+}
+.header ul li{
+    margin-right: 30px;
+
+}
+.header ul li a{
+ text-decoration: none;
+ font-size: 20px;
+ color: rgb(7, 66, 243);
+ border-radius: 10px;
+ padding: 8px;
+
+}
+.header ul li a:hover{
+    background-color: rgb(0, 200, 255);
+    color: aliceblue;
+    transition: 0.5s;
+
+}
+.thumbnail{
+    background-image: url('../pertemuahke3/th.jpeg');
+    height: 400px;
+    background-size: cover;
+    background-position: 0;
+    border-top: 5px solid rgb(0, 0, 0);
+
+}
+.artikel{
+
+    margin: 20px;
+}
+.judul p{
+    margin-top: -15px;
+    font-size: 14px;
+}
+.deskripsi{
+    text-align: justify;
+}
+.footer{
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
+    padding: 4px;
+    letter-spacing: 2px;
+}
+body{
+    background-image: url(../pertemuahke3/login/snow.png);
+}

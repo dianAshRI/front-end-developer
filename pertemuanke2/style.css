@@ -1,0 +1,21 @@
+h1{
+    /* background-color: rgb(255, 255, 255); */
+    color: rgb(106, 106, 106);
+    border-radius: 20%;
+    border: 20px solid rgb(108, 108, 108);
+    width: 35%;
+}
+.p2{
+    /* background-color: rgb(255, 255, 255); */
+    color: rgb(84, 84, 84);
+}
+body {
+    background-image: url('../PERTEMUA1/dian.jpg');
+    background-size: cover;
+
+}
+div{
+    width: 100px;
+    height: auto;
+    color: gray;
+}

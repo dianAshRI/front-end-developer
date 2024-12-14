@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pertemuan 5 - belajar js</title>
+</head>
+<body>
+    
+    <h1>JAVASCRIPT - JS</h1>
+    <form id="submitForm" action="">
+        <label for="">Nama Lengkap</label>
+        <input type="text" placeholder="isi nama lengkap" id="Nama_lengkap">
+        <br>
+        <span style="color: red;" id="errorNama"></span>
+        <br>
+        <label for="">Username</label>
+        <input type="text" placeholder="isi username" id="username">
+        <br>
+        <span style="color: red;" id="errorUsername"></span>
+        <br>
+        <label for="">Alamat</label>
+        <input type="text" placeholder="isi alamat" id="alamat">
+        <br>
+        <span style="color: red;" id="errorAlamat"></span>
+        <br>
+
+       
+        <button type="submit">Kirim data</button>
+        <button type="button"id="clear">clear All</button>
+
+    </form>
+
+    <p id="data_nama">Nama : </p>
+    <p id="data_username">Username : </p>
+    <p id="data_alamat">Alamat : </p>
+</body>
+
+<script>
+let submitForm = document.getElementById('submitForm');
+let clear=document.getElementById('clear');
+
+let Nama_lengkap = document.getElementById('Nama_lengkap')
+let username = document.getElementById('username')
+let alamat = document.getElementById('alamat')
+
+let data_nama = document.getElementById('data_nama');
+let data_username = document.getElementById('data_username');
+let data_alamat = document.getElementById('data_alamat');
+clear.addEventListener('click',function(event){
+    Nama_lengkap.value="";
+    username.value="";
+    alamat.value="";
+    data_nama.innerHTML = 'Nama Lengkap : ';
+    data_username.innerHTML = 'username : ';
+    data_alamat.innerHTML = 'Alamat : '; data_nama.innerHTML
+})
+
+submitForm.addEventListener('submit',function(event){
+    event.preventDefault();
+    let valid=true;
+    //id error pesan
+    let errorNama = document.getElementById('errorNama')
+    let errorUsername = document.getElementById('errorUsername')
+    let errorAlamat = document.getElementById('errorAlamat')
+
+    if(Nama_lengkap.value==''||Nama_lengkap.value==null){
+        errorNama.innerHTML="*nama tidak boleh kosong";
+        valid = false
+    }
+    else if(Nama_lengkap.value.length < 5){
+        errorNama.innerHTML="*nama lengkap harus lebih dari 5 char";
+        valid=false;
+    }
+    else if (Nama_lengkap.value.length > 100){
+        errorNama.innerHTML="*nama terlalu panjang";
+        valid = false;
+    }
+    else{
+        errorNama.innerHTML="";
+    }
+    //validasi username
+
+    if(username.value.length==""||username.value.length==null)
+    {
+        errorUsername.innerHTML="*username tidak boleh kosong";
+        valid=false;
+
+    }else if(username.value.length < 3){
+        errorUsername.innerHTML="*username minimal 4 karakter";
+        valid=false;
+    }
+    else{
+        errorUsername.innerHTML=""
+    }
+if(valid){
+
+
+    data_nama.innerHTML = 'Nama Lengkap : ' + Nama_lengkap.value;
+    data_username.innerHTML = 'username : ' + username.value;
+    data_alamat.innerHTML = 'alamat : ' + alamat.value;
+}else {
+    data_nama.innerHTML = 'Nama Lengkap : ';
+    data_username.innerHTML = 'username : ';
+    data_alamat.innerHTML = 'Alamat : ';
+
+
+}
+});
+</script>
+</html>
